@@ -43,7 +43,7 @@ const runCrawl = async (uri) => {
           }
         }
       })
-      stream.write(`${val}  ${status}\n`)
+      stream.write(val)
     } catch (error) {}
   }
 }
