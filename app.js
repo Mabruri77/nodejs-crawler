@@ -3,12 +3,12 @@ const cheerio = require("cheerio")
 const fs = require("fs")
 const { argv } = require("process")
 var stream = fs.createWriteStream("append.txt", { flags: "a" })
-
+const LinkedList = require("./linkedlist")
 const runCrawl = async (uri) => {
   if (!uri.endsWith("/")) {
     uri = uri + "/"
   }
-  const stack = []
+  const stack = new LinkedList()
   const seen = {}
   const { data, status } = await axios.get(uri)
   const $ = cheerio.load(data)
@@ -27,7 +27,7 @@ const runCrawl = async (uri) => {
   })
   while (stack.length) {
     try {
-      const val = stack.pop()
+      const { val } = stack.unshift()
       const { data, status } = await axios.get(val)
       const $ = cheerio.load(data)
       $("a").map((i, el) => {
