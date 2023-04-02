@@ -1,21 +1,51 @@
-
-https://www.sekarlaut.com/sitemap.php  200
-https://www.sekarlaut.com/investor.php?iID=9  200
-https://www.sekarlaut.com/investor.php?cID=8  200
-https://www.sekarlaut.com/?lang=id&cID=8  200
-https://www.sekarlaut.com/?lang=en&cID=8  200
-https://www.sekarlaut.com/investor.php?cID=7  200
-https://www.sekarlaut.com/?lang=id&cID=7  200
-https://www.sekarlaut.com/?lang=en&cID=7  200
-https://www.sekarlaut.com/investor.php?cID=10  200
-https://www.sekarlaut.com/?lang=id&cID=10  200
-https://www.sekarlaut.com/?lang=en&cID=10  200
-https://www.sekarlaut.com/investor.php?cID=6  200
-https://www.sekarlaut.com/?lang=id&cID=6  200
-https://www.sekarlaut.com/?lang=en&cID=6  200
-https://www.sekarlaut.com/investor.php?cID=5  200
-https://www.sekarlaut.com/?lang=id&cID=5  200
-https://www.sekarlaut.com/?lang=en&cID=5  200
-https://www.sekarlaut.com/investor.php?cID=4  200
-https://www.sekarlaut.com/?lang=id&cID=4  200
-https://www.sekarlaut.com/?lang=en&cID=4  200
+https://www.sekarlaut.com/sitemap.php
+https://www.sekarlaut.com/investor.php?iID=9
+https://www.sekarlaut.com/investor.php?cID=8
+https://www.sekarlaut.com/?lang=id&cID=8
+https://www.sekarlaut.com/?lang=en&cID=8
+https://www.sekarlaut.com/investor.php?cID=7
+https://www.sekarlaut.com/?lang=id&cID=7
+https://www.sekarlaut.com/?lang=en&cID=7
+https://www.sekarlaut.com/investor.php?cID=10
+https://www.sekarlaut.com/?lang=id&cID=10
+https://www.sekarlaut.com/?lang=en&cID=10
+https://www.sekarlaut.com/investor.php?cID=6
+https://www.sekarlaut.com/?lang=id&cID=6
+https://www.sekarlaut.com/?lang=en&cID=6
+https://www.sekarlaut.com/investor.php?cID=5
+https://www.sekarlaut.com/?lang=id&cID=5
+https://www.sekarlaut.com/?lang=en&cID=5
+https://www.sekarlaut.com/investor.php?cID=4
+https://www.sekarlaut.com/?lang=id&cID=4
+https://www.sekarlaut.com/?lang=en&cID=4
+https://www.sekarlaut.com/investor.php?cID=3
+https://www.sekarlaut.com/?lang=id&cID=3
+https://www.sekarlaut.com/?lang=en&cID=3
+https://www.sekarlaut.com/investor.php?iID=8
+https://www.sekarlaut.com/investor.php?iID=7
+https://www.sekarlaut.com/investor.php?iID=10
+https://www.sekarlaut.com/investor.php?iID=6
+https://www.sekarlaut.com/investor.php?iID=5
+https://www.sekarlaut.com/investor.php?iID=4
+https://www.sekarlaut.com/investor.php?iID=3
+https://www.sekarlaut.com/products.php?cID=23&scID=23&action=category
+https://www.sekarlaut.com/?page=1&cID=23&scID=23&action=category&act=
+https://www.sekarlaut.com/products.php?ID=25&cID=23&scID=23&action=detail
+https://www.sekarlaut.com/contact.php?ID=25&cID=23&scID=23
+https://www.sekarlaut.com/?lang=id&ID=25&cID=23
+https://www.sekarlaut.com/?lang=en&ID=25&cID=23
+https://www.sekarlaut.com/?lang=id&action=detail&ID=25&cID=23
+https://www.sekarlaut.com/?lang=en&action=detail&ID=25&cID=23
+https://www.sekarlaut.com/products.php?ID=26&cID=23&scID=23&action=detail
+https://www.sekarlaut.com/contact.php?ID=26&cID=23&scID=23
+https://www.sekarlaut.com/?lang=id&ID=26&cID=23
+https://www.sekarlaut.com/?lang=en&ID=26&cID=23
+https://www.sekarlaut.com/?lang=id&action=detail&ID=26&cID=23
+https://www.sekarlaut.com/?lang=en&action=detail&ID=26&cID=23
+https://www.sekarlaut.com/products.php?ID=27&cID=23&scID=23&action=detail
+https://www.sekarlaut.com/contact.php?ID=27&cID=23&scID=23
+https://www.sekarlaut.com/?lang=id&ID=27&cID=23
+https://www.sekarlaut.com/?lang=en&ID=27&cID=23
+https://www.sekarlaut.com/?lang=id&action=detail&ID=27&cID=23
+https://www.sekarlaut.com/?lang=en&action=detail&ID=27&cID=23
+https://www.sekarlaut.com/products.php?ID=28&cID=23&scID=23&action=detail
