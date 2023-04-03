@@ -9,7 +9,7 @@ const runCrawl = async (uri) => {
   if (!uri.endsWith("/")) {
     uri = uri + "/"
   }
-  const stack = new LinkedList()
+  const queue = new LinkedList()
   const seen = {}
   const { data, status } = await axios.get(uri, {
     withCredentials: true,
@@ -18,11 +18,11 @@ const runCrawl = async (uri) => {
   $("a").map((i, el) => {
     if (!seen[el.attribs.href] && el.attribs.href) {
       if (el.attribs.href.startsWith(uri)) {
-        stack.push(el.attribs.href)
+        queue.push(el.attribs.href)
         seen[el.attribs.href] = true
       } else {
         if (!el.attribs.href.startsWith("https") && !el.attribs.href.startsWith("http")) {
-          stack.push(uri + el.attribs.href)
+          queue.push(uri + el.attribs.href)
           seen[el.attribs.href] = true
         } else {
           otherSite.write(el.attribs.href + "\n")
@@ -31,9 +31,9 @@ const runCrawl = async (uri) => {
       }
     }
   })
-  while (stack.length) {
+  while (queue.length) {
     try {
-      const { val } = stack.unshift()
+      const { val } = queue.unshift()
       const { data, status } = await axios.get(val, {
         withCredentials: true,
       })
@@ -41,11 +41,11 @@ const runCrawl = async (uri) => {
       $("a").map((i, el) => {
         if (!seen[el.attribs.href] && el.attribs.href) {
           if (el.attribs.href.startsWith(uri)) {
-            stack.push(el.attribs.href)
+            queue.push(el.attribs.href)
             seen[el.attribs.href] = true
           } else {
             if (!el.attribs.href.startsWith("https") && !el.attribs.href.startsWith("http")) {
-              stack.push(uri + el.attribs.href)
+              queue.push(uri + el.attribs.href)
               seen[el.attribs.href] = true
             } else {
               otherSite.write(el.attribs.href + "\n")
