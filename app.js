@@ -17,16 +17,21 @@ const runCrawl = async (uri) => {
   const $ = cheerio.load(data)
   $("a").map((i, el) => {
     if (!seen[el.attribs.href] && el.attribs.href) {
+      seen[el.attribs.href] = true
       if (el.attribs.href.startsWith(uri)) {
+        originalSite.write(el.attribs.href + "\n")
         queue.push(el.attribs.href)
-        seen[el.attribs.href] = true
       } else {
         if (!el.attribs.href.startsWith("https") && !el.attribs.href.startsWith("http")) {
+          seen[el.attribs.href] = true
+          if (el.attribs.href.startsWith("/")) {
+            el.attribs.href = el.attribs.href.substring(1)
+          }
+          originalSite.write(uri + el.attribs.href + "\n")
           queue.push(uri + el.attribs.href)
-          seen[el.attribs.href] = true
         } else {
-          otherSite.write(el.attribs.href + "\n")
           seen[el.attribs.href] = true
+          otherSite.write(el.attribs.href + "\n")
         }
       }
     }
@@ -41,20 +46,24 @@ const runCrawl = async (uri) => {
       $("a").map((i, el) => {
         if (!seen[el.attribs.href] && el.attribs.href) {
           if (el.attribs.href.startsWith(uri)) {
-            queue.push(el.attribs.href)
             seen[el.attribs.href] = true
+            originalSite.write(el.attribs.href + "\n")
+            queue.push(el.attribs.href)
           } else {
             if (!el.attribs.href.startsWith("https") && !el.attribs.href.startsWith("http")) {
+              seen[el.attribs.href] = true
+              if (el.attribs.href.startsWith("/")) {
+                el.attribs.href = el.attribs.href.substring(1)
+              }
+              originalSite.write(uri + el.attribs.href + "\n")
               queue.push(uri + el.attribs.href)
-              seen[el.attribs.href] = true
             } else {
-              otherSite.write(el.attribs.href + "\n")
               seen[el.attribs.href] = true
+              otherSite.write(el.attribs.href + "\n")
             }
           }
         }
       })
-      originalSite.write(val + "\n")
     } catch (error) {}
   }
 }
